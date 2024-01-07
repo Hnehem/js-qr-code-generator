@@ -39,6 +39,10 @@
     font-family: inherit;
 }
 
+.btn:active {
+    transform: scale(0.9);
+}
+
 .generate {
     padding: 1rem;
     width: 26%;
