@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QR Code</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 </head>
+
 <body>
-    
+    <img class="background" src="imgs/bg-illustration.svg" alt="Background">
+    <img class="logo" src="imgs/logo-qr-generator.svg" alt="Logo">
+
+    <div class="search--bar">
+        <input class="url" type="text" placeholder="Enter an url">
+        <button class="btn generate">QR code</button>
+    </div>
+
+    <div class="qr--container fade">
+        <div class="inner--container">
+            <div class="qr--code">
+                <div class="qr"></div>
+            </div>
+            <div class="buttons">
+                <div class="qr--btn btn">
+                    Download
+                    <img src="imgs/download.svg" alt="Download">
+                </div>
+                <div class="qr--btn btn">
+                    Share
+                    <img src="imgs/share.svg" alt="Share">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
 </body>
+
 </html>
