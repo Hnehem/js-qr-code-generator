@@ -1,8 +1,8 @@
 .qr--container {
     width: 100%;
     height: 100%;
+    margin-top: 3.6rem;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -21,16 +21,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin-bottom: 3rem;
     background-color: #4e80ee33;
     border-radius: 50%;
-}
-
-.qr--code div {
-    width: 80%;
-    height: 80%;
-    background-color: #F2F5F9;
-    border-radius:  1.5rem;
 }
 
 .buttons {
@@ -55,11 +49,16 @@
 }
 
 .qr {
-    padding: 1.8rem;
+    width: 80%;
+    height: 80%;
+    background-color: #F2F5F9;
+    border-radius:  1.5rem;
+    padding: 1.4rem;
     overflow: hidden;
 }
 
-.qr img {
+.qr img, .qr canvas {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
