@@ -13,6 +13,9 @@ export const urlInfo = document.querySelector(".url");
 export let canvas;
 
 generateQr.addEventListener("click", getQrCode);
+logo.addEventListener('click', () => {
+  location.reload();
+})
 
 async function generateQrCode() {
   return new Promise((resolve, reject) => {
@@ -36,6 +39,7 @@ async function getQrCode() {
   try {
     toggleHide();
     await generateQrCode();
+
     downloadBtn.addEventListener("click", download);
     shareBtn.addEventListener("click", share);
   } catch (error) {
@@ -44,7 +48,7 @@ async function getQrCode() {
 }
 
 function toggleHide() {
-  [search, qrCodeContainer, logo, qrContent].map((elem) => {
+  [search, qrCodeContainer, qrContent, logo].map((elem) => {
     if (elem.classList.contains("logo")) {
       elem.classList.toggle("fixed");
     } else if (elem.classList.contains("qr--code")) {
